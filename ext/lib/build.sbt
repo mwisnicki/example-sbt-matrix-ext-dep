@@ -1,7 +1,7 @@
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / scalaVersion := "3.8.2"
 
-lazy val lib = projectMatrix.in(file("."))
+lazy val lib = projectMatrix.in(file(implicitly[sourcecode.File].value).getParentFile)
   .settings(
     name := "lib",
   ).jvmPlatform(
